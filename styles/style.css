@@ -1,0 +1,82 @@
+body {
+    background: #E5E5E5;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    grid-template-areas: 
+    "main"
+    "create";
+    gap: 50px;
+    justify-items: center;
+}
+main {
+    grid-area: "main";
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(6, auto);
+    gap: 10px;
+    width: 230px;
+    height: 350px;
+    margin-top: 20px;
+}
+div {
+    width: 50px;
+    height: 50px;
+    background: gray;
+}
+div:nth-child(n+21) {
+    background: blue;
+}
+div:nth-child(4n+3)  {
+    background: red;
+}
+.create {
+    margin-bottom: 50px;
+    grid-area: "create";
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 1368px;
+    height: 350px;
+    background: white;
+    justify-content: center;
+    
+}
+button {
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    width: 501px;
+    height: 92px;
+    background: #44D3A8;
+    border-radius: 100px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+button:hover {
+    background: blue;
+}
+button::before {
+    content:"";
+    position: absolute;
+    width: 200px;
+    height: 8px;
+    right: 520px;
+    border-bottom: 2px solid #C4C4C4;
+    border-top: 2px solid #C4C4C4;  
+}
+button::after {
+    content:"";
+    position: absolute;
+    width: 200px;
+    height: 8px;
+    left: 520px;
+    border-bottom: 2px solid #C4C4C4;
+    border-top: 2px solid #C4C4C4;
+}
